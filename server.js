@@ -107,6 +107,9 @@ function validateAnimal(animal) {
     }
   });
 
+  // middleware instructing server make all files in public dir readily available
+  app.use(express.static('public'));
+
   // parse incoming string or array data before passing to post functions
   // app.use() method adds a function to the server that request pass through before getting to the endpoint
   app.use(express.urlencoded({ extended: true }));// takes incoming coming post data and converts it to key/value pairs that can be access by req.body
@@ -130,6 +133,11 @@ function validateAnimal(animal) {
     res.json(animal);
   }
   });
+
+// index.html route
+app.get('/', (req, res) =>  {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+})
 
   
 
