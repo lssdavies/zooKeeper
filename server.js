@@ -139,6 +139,20 @@ app.get('/', (req, res) =>  {
   res.sendFile(path.join(__dirname, './public/index.html'));
 })
 
+//animals.html route
+app.get('/animals', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/animals.html'));
+})
+
+// zookeepers.html route
+app.get('/zookeepers', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/zookeepers.html'));
+});
+
+//wildcard route *
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
   
 
   
