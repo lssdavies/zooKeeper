@@ -19,6 +19,7 @@
   },
   "homepage": "https://github.com/lssdavies/zooKeeper#readme",
   "dependencies": {
-    "express": "^4.17.2"
+    "express": "^4.17.2",
+    "jest": "^27.4.7"
   }
 }
